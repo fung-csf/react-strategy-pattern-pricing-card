@@ -1,5 +1,8 @@
 # Pricing Card example of strategy and factory design patterns using Functional Composition instead of javascript classes.
 
+![image](https://github.com/fung-csf/react-strategy-pattern-pricing-card/assets/67588367/b5b561b4-2b18-4ff3-a3ce-84264d04ffe0)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
