@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PricingCard from "./components/PricingCard";
+import { v4 as uuidv4 } from "uuid";
+import "./styles.css";
+import { Country, Currency } from "./types";
+import { useCountryStrategy } from "./components/useCountryStrategy";
+import { COUNTRY_DATA_BY_NAME } from "./constants";
 
-function App() {
+const countriesToDisplay: Country[] = Object.keys(
+  COUNTRY_DATA_BY_NAME
+) as Country[];
+
+export default function App() {
+  const countryStrategies = useCountryStrategy(countriesToDisplay);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {countryStrategies.map((countryStrategy) => (
+        <PricingCard key={uuidv4()} countryStrategy={countryStrategy} />
+      ))}
     </div>
   );
 }
-
-export default App;

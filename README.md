@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Pricing Card example of strategy and factory design patterns using Functional Composition instead of javascript classes.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

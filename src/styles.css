@@ -1,0 +1,9 @@
+.App {
+  padding: 16px;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}

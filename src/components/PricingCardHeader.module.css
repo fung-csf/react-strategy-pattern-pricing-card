@@ -1,0 +1,13 @@
+.header {
+  padding: 40px 0 24px;
+}
+
+.header h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+}
