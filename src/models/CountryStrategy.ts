@@ -20,7 +20,7 @@ export function createCountryStrategy(country: Country): CountryStrategy {
 
     return {
         shouldDiscount,
-        getDiscountMessage: getDiscountMessage(getDiscountedPrice(), formatPriceByCurrency),
+        getDiscountMessage: getDiscountMessage(getDiscountedPrice()),
         getFinalPrice: () => formatPriceByCurrency(getFinalPrice()),
     }
 }

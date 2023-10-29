@@ -5,11 +5,10 @@ import { COUNTRY_DATA_BY_NAME } from "../constants";
 export function Formatter(country: Country) {
 
 
-    const getDiscountMessage = (discountedPrice: number, formatter: (price: number, symbol: string) => string) => {
+    const getDiscountMessage = (discountedPrice: number) => {
         return () => {
 
-            const symbol = COUNTRY_DATA_BY_NAME[country].symbol;
-            const formattedPrice = formatter(discountedPrice, symbol);
+            const formattedPrice = formatPriceByCurrency(discountedPrice);
 
             return {
                 [Country.VIETNAM]: `The price has been discounted by ${formattedPrice} because you come from Vietnam.`,
